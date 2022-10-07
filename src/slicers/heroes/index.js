@@ -6,6 +6,7 @@ const initialState = {
   posts: [],
   loading: false
 }
+
 export const fetchUserById = createAsyncThunk(
   'counter/fetchByPost',
   async () => {
@@ -27,10 +28,10 @@ export const counterSlice = createSlice({
 
   extraReducers: (b) => {
     b
-      .addCase(fetchUserById.pending, (state) => { state.loadingStatus = true })
+      .addCase(fetchUserById.pending, (state) => { state.loading = true })
       .addCase(fetchUserById.fulfilled, (state, action) => {
         state.posts = action.payload
-        state.loadingStatus = false
+        state.loading = false
       })
   }
 });

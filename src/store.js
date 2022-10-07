@@ -1,5 +1,5 @@
 import { configureStore, applyMiddleware } from '@reduxjs/toolkit'
-import rootReducer from './reducers/index'
+import rootReducer from './slicers/index'
 import thunk from 'redux-thunk'
 
 const logger = store => next => action => {

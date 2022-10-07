@@ -1,4 +1,5 @@
 import { dataFetchGenerate } from "../utils/dataFetchGenerate";
+import heroObj from "../utils/heroObj";
 import Api from "./Api";
 
 const api = new Api('https://gateway.marvel.com:443/v1/public/');
@@ -11,4 +12,10 @@ export const getPost = () => {
 export const getChapters = async () => {
   const data = await api.get(`characters?apikey=${API_KEY}`, 'GET')
   return dataFetchGenerate(data.response)
+}
+
+export const getChapter = async (id) => {
+  const data = await api.get(`characters/${id}?apikey=${API_KEY}`, 'GET')
+  const heroResponse = data.response.data.results[0]
+  return heroObj(heroResponse)
 }

@@ -8,7 +8,6 @@ const About = (props) => {
     <>
       <div>
         <h1>About</h1>
-        {/* <Counter /> */}
         <Link to='/home'>Back</Link>
       </div>
     </>

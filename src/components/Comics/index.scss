@@ -1,0 +1,12 @@
+.comics {
+  h4 {
+    margin: 0;
+  }
+
+  &__item {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}

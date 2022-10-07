@@ -1,17 +1,16 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
 import Header from './components/Header';
 import Main from './components/Main';
 import About from './Pages/About';
-import Home from './Pages/Home';
+import Heroes from './Pages/Home';
+import Hero from './Pages/Hero';
 import './App.css';
 
 
-const routers = [
-  { path: '/', element: <About /> },
-  { path: '/home', element: <Home /> },
-]
 
-const router = createBrowserRouter(routers)
 
 function App() {
   return (
@@ -20,7 +19,11 @@ function App() {
         <Header />
         <div className='wrapper'>
           <Main>
-            <RouterProvider router={router} />
+            <Routes>
+              <Route path='/' element={<About />}></Route>
+              <Route path='/heroes' element={<Heroes />}></Route>
+              <Route path='/hero/:id' element={<Hero />}></Route>
+            </Routes>
           </Main>
         </div>
       </div>
