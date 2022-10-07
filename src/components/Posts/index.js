@@ -1,8 +1,9 @@
 import PostItem from "../PostsItem"
 
 const Posts = (props) => {
+  console.log(props, 'props');
   return (
-    props.posts.map((item) => <PostItem id={item.id} title={item.title} key={item.id} />)
+    props.heroes && props.heroes.length ? props.heroes.map((item) => <PostItem {...item} />) : null
   )
 }
 

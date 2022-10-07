@@ -3,8 +3,9 @@ import './index.scss'
 const PostItem = (props) => {
   return (
     <li className="item">
-      <p>{props.title}</p>
-      <p>{props.id}</p>
+      <img src={props.img} alt={props.name} />
+      <p>{props.name}</p>
+      <p>{props.description}</p>
     </li>
   )
 }
