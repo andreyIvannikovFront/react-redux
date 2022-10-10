@@ -5,6 +5,7 @@ const PostItem = (props) => {
   const navigate = useNavigate()
 
   const onClickHero = () => {
+    console.log('test');
     navigate(`/hero/${props.id}`)
   }
 
