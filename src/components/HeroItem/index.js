@@ -7,6 +7,7 @@ const PostItem = (props) => {
   const onClickHero = () => {
     navigate(`/hero/${props.id}`)
   }
+
   return (
     <div className="card" onClick={onClickHero}>
       <div className='card__header'>
