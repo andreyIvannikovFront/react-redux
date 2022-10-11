@@ -1,16 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { getChapters } from '../../api'
+import { getPost } from '../../api'
 
 const initialState = {
   counter: 0,
-  posts: [],
-  loading: false
+  posts: []
 }
-
 export const fetchUserById = createAsyncThunk(
   'counter/fetchByPost',
   async () => {
-    const response = await getChapters()
+    const response = await getPost()
     return response
   }
 )
@@ -27,12 +25,9 @@ export const counterSlice = createSlice({
   },
 
   extraReducers: (b) => {
-    b
-      .addCase(fetchUserById.pending, (state) => { state.loading = true })
-      .addCase(fetchUserById.fulfilled, (state, action) => {
-        state.posts = action.payload
-        state.loading = false
-      })
+    b.addCase(fetchUserById.fulfilled, (state, action) => {
+      state.posts = action.payload.response
+    })
   }
 });
 

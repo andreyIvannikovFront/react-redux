@@ -1,8 +1,6 @@
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: #269999;
 
   .logo {
     width: 130px;
@@ -15,16 +13,6 @@
   }
 }
 
-.menu {
-  &__list {
-    display: flex;
-  }
-
-  &__item {
-    font-size: 20px;
-
-    &+& {
-      margin-left: 10px;
-    }
-  }
+.counter {
+  font-size: 40px;
 }

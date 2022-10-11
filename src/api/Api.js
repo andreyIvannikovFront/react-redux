@@ -1,4 +1,5 @@
 export default class Api {
+
   constructor(preffix) {
     this.preffix = preffix
     this.get = this.get.bind(this)
@@ -31,7 +32,7 @@ export default class Api {
       }).catch((e) => console.log(e))
   }
 
-  get(path) {
+  get(path, requestBody = {}) {
     return this.request('GET', { path })
   }
 
