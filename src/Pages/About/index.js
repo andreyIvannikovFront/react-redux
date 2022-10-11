@@ -1,6 +1,6 @@
 import './index.scss'
 import { Link } from 'react-router-dom'
-import Counter from '../../components/Counter/index'
+// import Counter from '../../components/Counter/index'
 
 
 const About = (props) => {
@@ -8,7 +8,6 @@ const About = (props) => {
     <>
       <div>
         <h1>About</h1>
-        <Counter />
         <Link to='/home'>Back</Link>
       </div>
     </>

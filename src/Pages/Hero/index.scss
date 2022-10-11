@@ -1,0 +1,9 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+
+  &__card {
+    align-self: flex-start;
+  }
+}
