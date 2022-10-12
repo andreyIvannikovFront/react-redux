@@ -12,6 +12,7 @@ import './index.scss'
 const Hero = ({ fetchHero, hero, loading }) => {
   const { id } = useParams()
 
+
   useEffect(() => {
     fetchHero(id)
   }, [])

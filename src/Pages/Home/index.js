@@ -12,6 +12,8 @@ const Home = ({ loading, fetchUserById, heroes }) => {
     fetchUserById()
   }, [])
 
+
+
   return (
     <>
       {
